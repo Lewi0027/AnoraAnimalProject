@@ -66,6 +66,54 @@ $(document).ready(function() {
             name: "Horse",
             sound: 'sound/horse.wav',
             used: false
+        },
+        {
+            image: 'images/wolf.png',
+            name: "Wolf",
+            sound: 'sound/wolf.wav',
+            used: false
+        },
+        {
+            image: 'images/goose.png',
+            name: "Goose",
+            sound: 'sound/goose.wav',
+            used: false
+        },
+        {
+            image: 'images/rooster.png',
+            name: "Rooster",
+            sound: 'sound/rooster.wav',
+            used: false
+        },
+        {
+            image: 'images/whale.png',
+            name: "Whalee",
+            sound: 'sound/whale.wav',
+            used: false
+        },
+        {
+            image: 'images/dolphin.png',
+            name: "Dolphin",
+            sound: 'sound/dolphin.wav',
+            used: false
+        },
+        {
+            image: 'images/tiger.png',
+            name: "Tiger",
+            sound: 'sound/tiger.wav',
+            used: false
+        },
+        {
+            image: 'images/snake.png',
+            name: "Snake",
+            sound: 'sound/snake.wav',
+            used: false
+        },
+        {
+            image: 'images/parrot.png',
+            name: "Parrot",
+            sound: 'sound/parrot.wav',
+            used: false
         }
     ];
 
