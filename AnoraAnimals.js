@@ -74,10 +74,10 @@ $(document).ready(function() {
     intilializePage();
 
     // Populate initial animal images and names
-    $('#RA1').html('<img src="' + selectedAnimals[0].image + '" alt="' + selectedAnimals[0].name + '"><br>' + selectedAnimals[0].name);
-    $('#RA2').html('<img src="' + selectedAnimals[1].image + '" alt="' + selectedAnimals[1].name + '"><br>' + selectedAnimals[1].name);
-    $('#RA3').html('<img src="' + selectedAnimals[2].image + '" alt="' + selectedAnimals[2].name + '"><br>' + selectedAnimals[2].name);
-    $('#RA4').html('<img src="' + selectedAnimals[3].image + '" alt="' + selectedAnimals[3].name + '"><br>' + selectedAnimals[3].name);
+    $('#RA1').html('<img src="' + selectedAnimals[0].image + '" alt="' + selectedAnimals[0].name + '">' + selectedAnimals[0].name);
+    $('#RA2').html('<img src="' + selectedAnimals[1].image + '" alt="' + selectedAnimals[1].name + '">' + selectedAnimals[1].name);
+    $('#RA3').html('<img src="' + selectedAnimals[2].image + '" alt="' + selectedAnimals[2].name + '">' + selectedAnimals[2].name);
+    $('#RA4').html('<img src="' + selectedAnimals[3].image + '" alt="' + selectedAnimals[3].name + '">' + selectedAnimals[3].name);
 
     // Event handler for clicking the sound button
     $('#soundIconButton').on('click', function() {
