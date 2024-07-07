@@ -144,6 +144,12 @@ $(document).ready(function() {
             name: "Pig",
             sound: 'sound/pig.wav',
             used: false
+        },
+        {
+            image: 'images/godzilla.png',
+            name: "Godzilla",
+            sound: 'sound/godzilla.wav',
+            used: false
         }
     ];
 
