@@ -87,7 +87,7 @@ $(document).ready(function() {
         },
         {
             image: 'images/whale.png',
-            name: "Whalee",
+            name: "Whale",
             sound: 'sound/whale.wav',
             used: false
         },
@@ -113,6 +113,36 @@ $(document).ready(function() {
             image: 'images/parrot.png',
             name: "Parrot",
             sound: 'sound/parrot.wav',
+            used: false
+        },
+        {
+            image: 'images/bee.png',
+            name: "Bee",
+            sound: 'sound/bee.wav',
+            used: false
+        },
+        {
+            image: 'images/duck.png',
+            name: "Duck",
+            sound: 'sound/duck.wav',
+            used: false
+        },
+        {
+            image: 'images/frog.png',
+            name: "Frog",
+            sound: 'sound/frog.wav',
+            used: false
+        },
+        {
+            image: 'images/donkey.png',
+            name: "Donkey",
+            sound: 'sound/donkey.wav',
+            used: false
+        },
+        {
+            image: 'images/pig.png',
+            name: "Pig",
+            sound: 'sound/pig.wav',
             used: false
         }
     ];
