@@ -12,230 +12,158 @@ $(document).ready(function() {
         {
             name: "Bear",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('bear', this.imageNum);
-            },
             sound: 'sound/bear.wav',
             used: false
         },
         {
             name: "Bee",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('bee', this.imageNum);
-            },
             sound: 'sound/bee.wav',
             used: false
         },
         {
             name: "Cat",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('cat', this.imageNum);
-            },
             sound: 'sound/cat.wav',
             used: false
         },
         {
             name: "Cow",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('cow', this.imageNum);
-            },
             sound: 'sound/cow.wav',
             used: false
         },
         {
             name: "Deer",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('deer', this.imageNum);
-            },
             sound: 'sound/deer.wav',
             used: false
         },
         {
             name: "Dog",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('dog', this.imageNum);
-            },
             sound: 'sound/dog.wav',
             used: false
         },
         {
             name: "Dolphin",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('dolphin', this.imageNum);
-            },
             sound: 'sound/dolphin.wav',
             used: false
         },
         {
             name: "Donkey",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('donkey', this.imageNum);
-            },
             sound: 'sound/donkey.wav',
             used: false
         },
         {
             name: "Duck",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('duck', this.imageNum);
-            },
             sound: 'sound/duck.wav',
             used: false
         },
         {
             name: "Eagle",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('eagle', this.imageNum);
-            },
             sound: 'sound/eagle.wav',
             used: false
         },
         {
             name: "Elephant",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('elephant', this.imageNum);
-            },
             sound: 'sound/elephant.wav',
             used: false
         },
         {
             name: "Frog",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('frog', this.imageNum);
-            },
             sound: 'sound/frog.wav',
             used: false
         },
         {
             name: "Godzilla",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('godzilla', this.imageNum);
-            },
             sound: 'sound/godzilla.wav',
             used: false
         },
         {
             name: "Goat",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('goat', this.imageNum);
-            },
             sound: 'sound/goat.wav',
             used: false
         },
         {
             name: "Goose",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('goose', this.imageNum);
-            },
             sound: 'sound/goose.wav',
             used: false
         },
         {
             name: "Horse",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('horse', this.imageNum);
-            },
             sound: 'sound/horse.wav',
             used: false
         },
         {
             name: "Mouse",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('mouse', this.imageNum);
-            },
             sound: 'sound/mouse.wav',
             used: false
         },
         {
             name: "Parrot",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('parrot', this.imageNum);
-            },
             sound: 'sound/parrot.wav',
             used: false
         },
         {
             name: "Pig",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('pig', this.imageNum);
-            },
             sound: 'sound/pig.wav',
             used: false
         },
         {
             name: "Rooster",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('rooster', this.imageNum);
-            },
             sound: 'sound/rooster.wav',
             used: false
         },
         {
             name: "Sheep",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('sheep', this.imageNum);
-            },
             sound: 'sound/sheep.wav',
             used: false
         },
         {
             name: "Snake",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('snake', this.imageNum);
-            },
             sound: 'sound/snake.wav',
             used: false
         },
         {
             name: "Tiger",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('tiger', this.imageNum);
-            },
             sound: 'sound/tiger.wav',
             used: false
         },
         {
             name: "Whale",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('whale', this.imageNum);
-            },
             sound: 'sound/whale.wav',
             used: false
         },
         {
             name: "Wolf",
             imageNum: 1,
-            get image() {
-                return imageStringGenerator('wolf', this.imageNum);
-            },
             sound: 'sound/wolf.wav',
             used: false
         }
     ];
 
+    animals.forEach(function(animal) {
+        animal.image = imageStringGenerator(animal.name.toLowerCase(), animal.imageNum);
+    });
 
     var selectedAnimals;
     var currentIndex;
