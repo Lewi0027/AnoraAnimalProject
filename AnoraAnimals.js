@@ -72,18 +72,33 @@ $(document).ready(function() {
     }
 
     function changePageToTempImageAndReload() {
-        // Wait x second. no idea how these numbers work
-        setTimeout(function() {
-            location.reload();
-        }, 50000);
-        
-        // Replace entire body content with a temporary image
-        document.body.innerHTML = '<img src="images/goodJob.png" alt="Good job!" style="width: 100vw; height: 100vh; object-position: center;">';
-
+        // Create the temporary image element
+        var tempImage = document.createElement('img');
+        tempImage.src = 'images/goodJob.png';
+        tempImage.alt = 'Good job!';
+        tempImage.style.width = '100vw';
+        tempImage.style.height = '100vh';
+        tempImage.style.objectPosition = 'center';
+        tempImage.style.cursor = 'pointer'; // Add pointer cursor to indicate clickability
     
-        // Wait 2 seconds
-        setTimeout(function() {
+        // Replace entire body content with the temporary image
+        document.body.innerHTML = ''; // Clear existing body content
+        document.body.appendChild(tempImage); // Append the temporary image to the body
+    
+        // Function to reload the page after 5 seconds
+        var reloadTimeout = setTimeout(function() {
             location.reload();
-        }, 2000);
-    }
+        }, 5000);
+    
+        // Function to reload the page when the temporary image is clicked or touched
+        function reloadPage() {
+            clearTimeout(reloadTimeout); // Cancel the reload timeout
+            location.reload(); // Reload the page
+        }
+    
+        // Event listeners for click and touch events on the temporary image
+        tempImage.addEventListener('click', reloadPage);
+        tempImage.addEventListener('touchstart', reloadPage);
+    }    
+    
 });
