@@ -78,7 +78,8 @@ $(document).ready(function() {
         }, 50000);
         
         // Replace entire body content with a temporary image
-        document.body.innerHTML = '<img src="images/goodJob.png" alt="Good job!" style="width: 100%; object-fit: cover;">';
+        document.body.innerHTML = '<img src="images/goodJob.png" alt="Good job!" style="width: 100vw; height: 100vh; object-position: center;">';
+
     
         // Wait 2 seconds
         setTimeout(function() {
