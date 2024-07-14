@@ -25,4 +25,31 @@
             </div>
         </div>
 </body>
+
+<script>
+    function logPageHeight() {
+        var pageHeight = window.innerHeight;
+        var mediaGroup = '';
+
+        // Check against each media query range
+        if (pageHeight >= 600 && pageHeight < 800) {
+            mediaGroup = '600';
+        } else if (pageHeight >= 800 && pageHeight < 1000) {
+            mediaGroup = '800';
+        } else if (pageHeight >= 1000 && pageHeight < 1200) {
+            mediaGroup = '1000';
+        } else if (pageHeight >= 1200) {
+            mediaGroup = '1200';
+        }
+
+        console.log(`Viewport Height: ${pageHeight}px, Media Group: ${mediaGroup}`);
+    }
+
+    // Call the function once the document is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        logPageHeight();
+    });
+</script>
+
+
 </html>

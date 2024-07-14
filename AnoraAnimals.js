@@ -1,35 +1,13 @@
 $(document).ready(function() {
-
-    //Generate image string
-    function imageStringGenerator(string, num) {
-        var stringName = 'images/';
-        stringName += string;
-        stringName += num;
-        stringName += '.png';
-        return stringName;
-    }
-
-    // Create field to randomly choose image
-    animals.forEach(function(animal) {
-        animal.randomNum = Math.floor(Math.random() * animal.imageNum) + 1;
-    });
-
-    // Attach image info
-    animals.forEach(function(animal) {
-        animal.image = imageStringGenerator(animal.name.toLowerCase(), animal.randomNum);
-    });
-
-    // console.log(animals);
-
     var selectedAnimals;
     var currentIndex;
-    intilializePage();
+    
+    initializePage();
 
     // Populate initial animal images and names
-    $('#RA1').html('<img src="' + selectedAnimals[0].image + '" alt="' + selectedAnimals[0].name + '">' + selectedAnimals[0].name);
-    $('#RA2').html('<img src="' + selectedAnimals[1].image + '" alt="' + selectedAnimals[1].name + '">' + selectedAnimals[1].name);
-    $('#RA3').html('<img src="' + selectedAnimals[2].image + '" alt="' + selectedAnimals[2].name + '">' + selectedAnimals[2].name);
-    $('#RA4').html('<img src="' + selectedAnimals[3].image + '" alt="' + selectedAnimals[3].name + '">' + selectedAnimals[3].name);
+    selectedAnimals.forEach((animal, index) => {
+        $('#RA' + (index + 1)).html('<img src="' + animal.image + '" alt="' + animal.name + '">' + animal.name);
+    });
 
     // Event handler for clicking the sound button
     $('#soundIconButton').on('click', function() {
@@ -39,9 +17,9 @@ $(document).ready(function() {
     // Event handler for clicking animal images
     $('.randomAnimal').on('click', function() {
         var index = $(this).index('.randomAnimal'); // Get the index of the clicked animal
-        console.log(index);
         var selectedAnimal = selectedAnimals[index];
 
+        // Correct click sequence
         if (index === currentIndex) {
             $('#RA' + (index + 1)).html('<img src="images/smile' + (index + 1) + '.png" alt="Smile"> Good job!');
             selectedAnimal.used = true;
@@ -53,7 +31,6 @@ $(document).ready(function() {
 
     // Function to play a random sound
     function playRandomSound() {
-        console.log("cs:" + currentIndex);
         var selectedAnimal = selectedAnimals[currentIndex];
 
         // Play the corresponding sound
@@ -72,13 +49,13 @@ $(document).ready(function() {
                 break;
             }
         }
-        console.log("reint: " + reinitialize);
         if (reinitialize == true) {
-            intilializePage();
+            initializePage();
             changePageToTempImageAndReload();
         }
     }
 
+    // Shuffle an array
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -86,14 +63,16 @@ $(document).ready(function() {
         }
     }
 
-    function intilializePage() {
+    // Create new page
+    // Defaults to 4 animals
+    function initializePage(numAnimals = 4) {
         shuffle(animals);
-        selectedAnimals = animals.slice(0, 4);
-        currentIndex = Math.floor(Math.random() * 4);
+        selectedAnimals = animals.slice(0, numAnimals);
+        currentIndex = Math.floor(Math.random() * numAnimals);
     }
 
     function changePageToTempImageAndReload() {
-        // Wait .7 second
+        // Wait x second. no idea how these numbers work
         setTimeout(function() {
             location.reload();
         }, 50000);

@@ -1,18 +1,23 @@
-# Sources for AnoraAnimalProject
+# AnoraAnimalProject
 
-Images:<br>
-<https://www.pngwing.com/><br>
-<https://pngimg.com/images/animals/><br>
+How To:
+Turn off & create new animals - Refer to Animals.js
 
-Sounds:<br>
-<https://www.wavsource.com/animals/animals.htm><br>
-<https://pixabay.com/sound-effects/search/animals/><br>
+## Sources for AnoraAnimalProject
 
-WAV convertor:<br>
-<https://cloudconvert.com/wav-converter><br>
+Images:
+https://www.pngwing.com/
+https://pngimg.com/images/animals/
 
-Audio trimmer:<br>
-<https://audiotrimmer.com/><br>
+Sounds:
+https://www.wavsource.com/animals/animals.htm
+https://pixabay.com/sound-effects/search/animals/
 
-Modify audio volume:<br>
-<https://audioalter.com/volume>
+WAV convertor:
+https://cloudconvert.com/wav-converter
+
+Audio trimmer:
+https://audiotrimmer.com/
+
+Modify audio volume:
+https://audioalter.com/volume
