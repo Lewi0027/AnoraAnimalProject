@@ -1,5 +1,11 @@
 var animals = [
     {
+        name: "Baby",
+        imageNum: 2,
+        sound: 'sound/baby.wav',
+        used: false
+    },
+    {
         name: "Bear",
         imageNum: 3,
         sound: 'sound/bear.wav',
@@ -61,13 +67,13 @@ var animals = [
     },
     {
         name: "Duck",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/duck.wav',
         used: false
     },
     {
         name: "Eagle",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/eagle.wav',
         used: false
     },
@@ -97,13 +103,13 @@ var animals = [
     },
     {
         name: "Goose",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/goose.wav',
         used: false
     },
     {
         name: "Horse",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/horse.wav',
         used: false
     },
@@ -115,13 +121,13 @@ var animals = [
     },
     {
         name: "Parrot",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/parrot.wav',
         used: false
     },
     {
         name: "Pig",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/pig.wav',
         used: false
     },
@@ -145,13 +151,13 @@ var animals = [
     },
     {
         name: "Snake",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/snake.wav',
         used: false
     },
     {
         name: "Tiger",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/tiger.wav',
         used: false
     },
@@ -169,7 +175,7 @@ var animals = [
     },
     {
         name: "Wolf",
-        imageNum: 1,
+        imageNum: 2,
         sound: 'sound/wolf.wav',
         used: false
     }
