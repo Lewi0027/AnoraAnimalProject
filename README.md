@@ -13,3 +13,6 @@ WAV convertor:<br>
 
 Audio trimmer:<br>
 <https://audiotrimmer.com/><br>
+
+Modify audio volume:<br>
+<https://audioalter.com/volume>
