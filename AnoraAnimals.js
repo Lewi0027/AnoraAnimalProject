@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    //Generate image string
     function imageStringGenerator(string, num) {
         var stringName = 'images/';
         stringName += string;
@@ -8,15 +9,17 @@ $(document).ready(function() {
         return stringName;
     }
 
+    // Create field to randomly choose image
     animals.forEach(function(animal) {
         animal.randomNum = Math.floor(Math.random() * animal.imageNum) + 1;
     });
 
+    // Attach image info
     animals.forEach(function(animal) {
         animal.image = imageStringGenerator(animal.name.toLowerCase(), animal.randomNum);
     });
 
-    console.log(animals);
+    // console.log(animals);
 
     var selectedAnimals;
     var currentIndex;
