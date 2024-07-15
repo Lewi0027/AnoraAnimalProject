@@ -11,7 +11,7 @@ body {
     /* justify-content: center; Center content vertically */
     height: 100vh;
 }
-h3 {
+h2 {
     margin-top: 7%; /* Adjust top margin to create space */
 }
 .answerArea {
