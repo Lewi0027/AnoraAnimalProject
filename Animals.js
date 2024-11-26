@@ -27,151 +27,65 @@
 // - Set name: to correct animal name in quotes. I.e. "example".
 // - Set imageNum to the amount of images. I.e. 1. 
 
-// Generate image string
-function imageStringGenerator(string, num) {
-    var stringName = 'images/';
-    stringName += string;
-    stringName += num;
-    stringName += '.png';
-    return stringName;
+/**
+ * Generates image file path for a given animal
+ * @param {string} animalName - Name of the animal
+ * @param {number} imageNum - Image number
+ * @returns {string} Full path to the animal image
+ */
+function generateImagePath(animalName, imageNum) {
+    return `images/${animalName.toLowerCase()}${imageNum}.png`;
 }
 
-// Generate sound string
-function soundStringGenerator(string) {
-    var stringName = 'sound/';
-    stringName += string;
-    stringName += '.wav';
-    return stringName;
+/**
+ * Generates sound file path for a given animal
+ * @param {string} animalName - Name of the animal
+ * @returns {string} Full path to the animal sound file
+ */
+function generateSoundPath(animalName) {
+    return `sound/${animalName.toLowerCase()}.wav`;
 }
 
-// Array of animals
-var animals = [
-    {
-        name: "Baby",
-        imageNum: 2
+// Animal configuration with improved structure
+const animals = [
+    { name: "Baby", imageCount: 2 },
+    { name: "Bear", imageCount: 3 },
+    { name: "Bee", imageCount: 1 },
+    { name: "Cat", imageCount: 1 },
+    { name: "Chimpanzee", imageCount: 2 },
+    { name: "Cow", imageCount: 1 },
+    { name: "Crow", imageCount: 1 },
+    { name: "Deer", imageCount: 1 },
+    { name: "Dog", imageCount: 1 },
+    { name: "Dolphin", imageCount: 1 },
+    { name: "Donkey", imageCount: 1 },
+    { name: "Duck", imageCount: 2 },
+    { name: "Eagle", imageCount: 2 },
+    { name: "Elephant", imageCount: 1 },
+    { name: "Frog", imageCount: 1 },
+    { name: "Godzilla", imageCount: 1 },
+    { name: "Goat", imageCount: 1 },
+    { name: "Goose", imageCount: 2 },
+    { name: "Horse", imageCount: 2 },
+    { name: "Mouse", imageCount: 1 },
+    { name: "Parrot", imageCount: 2 },
+    { name: "Pig", imageCount: 2 },
+    { name: "Rooster", imageCount: 1 },
+    { name: "Seal", imageCount: 2 },
+    { name: "Sheep", imageCount: 1 },
+    { name: "Snake", imageCount: 2 },
+    { name: "Tiger", imageCount: 2 },
+    { name: "Turkey", imageCount: 1 },
+    { name: "Whale", imageCount: 1 },
+    { name: "Wolf", imageCount: 2 }
+].map(animal => ({
+    ...animal,
+    randomImageNum: Math.floor(Math.random() * animal.imageCount) + 1,
+    get image() {
+        return generateImagePath(this.name, this.randomImageNum);
     },
-    {
-        name: "Bear",
-        imageNum: 3
+    get sound() {
+        return generateSoundPath(this.name);
     },
-    {
-        name: "Bee",
-        imageNum: 1
-    },
-    {
-        name: "Cat",
-        imageNum: 1
-    },
-    {
-        name: "Chimpanzee",
-        imageNum: 2
-    },
-    {
-        name: "Cow",
-        imageNum: 1
-    },
-    {
-        name: "Crow",
-        imageNum: 1
-    },
-    {
-        name: "Deer",
-        imageNum: 1
-    },
-    {
-        name: "Dog",
-        imageNum: 1
-    },
-    {
-        name: "Dolphin",
-        imageNum: 1
-    },
-    {
-        name: "Donkey",
-        imageNum: 1
-    },
-    {
-        name: "Duck",
-        imageNum: 2
-    },
-    {
-        name: "Eagle",
-        imageNum: 2
-    },
-    {
-        name: "Elephant",
-        imageNum: 1
-    },
-    {
-        name: "Frog",
-        imageNum: 1
-    },
-    {
-        name: "Godzilla",
-        imageNum: 1
-    },
-    {
-        name: "Goat",
-        imageNum: 1
-    },
-    {
-        name: "Goose",
-        imageNum: 2
-    },
-    {
-        name: "Horse",
-        imageNum: 2
-    },
-    {
-        name: "Mouse",
-        imageNum: 1
-    },
-    {
-        name: "Parrot",
-        imageNum: 2
-    },
-    {
-        name: "Pig",
-        imageNum: 2
-    },
-    {
-        name: "Rooster",
-        imageNum: 1
-    },
-    {
-        name: "Seal",
-        imageNum: 2
-    },
-    {
-        name: "Sheep",
-        imageNum: 1
-    },
-    {
-        name: "Snake",
-        imageNum: 2
-    },
-    {
-        name: "Tiger",
-        imageNum: 2
-    },
-    {
-        name: "Turkey",
-        imageNum: 1
-    },
-    {
-        name: "Whale",
-        imageNum: 1
-    },
-    {
-        name: "Wolf",
-        imageNum: 2
-    }
-];
-
-// Attach image, sound, and used fields to each animal
-animals.forEach(function(animal) {
-    animal.randomNum = Math.floor(Math.random() * animal.imageNum) + 1;
-    animal.image = imageStringGenerator(animal.name.toLowerCase(), animal.randomNum);
-    animal.sound = soundStringGenerator(animal.name.toLowerCase());
-    animal.used = false;
-});
+    used: false
+}));

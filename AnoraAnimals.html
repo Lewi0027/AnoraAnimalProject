@@ -3,54 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animals for Anora!</title>
+    <title>Anora's Animal Match Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="Animals.js"></script>
-    <script src="AnoraAnimals.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="Animals.js" defer></script>
+    <script src="AnoraAnimals.js" defer></script>
 </head>
-<body style="text-align: center;">
-    <h2>Anora's Animals!</h2>
-    <button id="soundIconButton"  style="background-color: #6ca9db;"><img src="Images/soundIcon.png" alt="Sound Icon" width="50" height="40"></button>
-    <audio id="myAudio" src="" type="audio/wav"></audio>
-    <p style="font-weight: bold;">Link the sound to the correct picture!</p>
-    <div class="floatContainer">
-        <div>
+<body>
+    <div class="container">
+        <h1>Anora's Animal Match Game</h1>
+        <button id="soundIconButton" aria-label="Play Sound">
+            <img src="Images/soundIcon.png" alt="Sound Icon" width="50" height="40">
+        </button>
+        <audio id="myAudio" src="" type="audio/wav"></audio>
+        <p class="instructions">Link the sound to the correct picture!</p>
+        <div class="game-grid">
             <div class="randomAnimal" id="RA1">Random Animal 1</div>
             <div class="randomAnimal" id="RA2">Random Animal 2</div>
-        </div>
-        <div>
             <div class="randomAnimal" id="RA3">Random Animal 3</div>
             <div class="randomAnimal" id="RA4">Random Animal 4</div>
         </div>
     </div>
 </body>
-
-<!-- Code to see what viewport you are in. -->
-<!-- <script>
-    function logPageHeight() {
-        var pageHeight = window.innerHeight;
-        var mediaGroup = '';
-
-        // Check against each media query range
-        if (pageHeight >= 600 && pageHeight < 800) {
-            mediaGroup = '600';
-        } else if (pageHeight >= 800 && pageHeight < 1000) {
-            mediaGroup = '800';
-        } else if (pageHeight >= 1000 && pageHeight < 1200) {
-            mediaGroup = '1000';
-        } else if (pageHeight >= 1200) {
-            mediaGroup = '1200';
-        }
-
-        console.log(`Viewport Height: ${pageHeight}px, Media Group: ${mediaGroup}`);
-    }
-
-    // Call the function once the document is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        logPageHeight();
-    });
-</script> -->
-
-
 </html>
