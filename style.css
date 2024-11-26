@@ -1,6 +1,6 @@
 :root {
-    --background-color: #f0f4f8;
-    --primary-color: #6ca9db;
+    --background-color: #6ca9db;
+    --button-color: #b6babe;
     --text-color: #333;
     --border-color: #4a4a4a;
 }
@@ -12,7 +12,8 @@
 }
 
 body {
-    background-image: url("images/animalBorder1.png");
+    /* background-image: url("images/animalBorder1.png"); */
+    background-color: #6ca9db;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -21,6 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
     background-color: var(--background-color);
 }
 
@@ -29,6 +32,14 @@ body {
     max-width: 90%;
     width: 100%;
     padding: 20px;
+}
+
+.border_container_top {
+    width: 100%;
+    height: 100%;
+    border: 30px solid transparent;
+    border-image: url('Images/animalBorderPiece.png') 30 round;
+    border-width: 30px;
 }
 
 h1 {
@@ -44,7 +55,7 @@ h1 {
 }
 
 #soundIconButton {
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     border: none;
     border-radius: 10px;
     padding: 10px;
@@ -62,15 +73,18 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-content: center;
-    max-width: 80%;
+    width: 80%;
+    max-width: 1000px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .randomAnimal {
     border: 2px solid var(--border-color);
     border-radius: 10px;
     text-align: center;
-    height: 300px;
+    min-width: 200px;
+    aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -99,17 +113,19 @@ h1 {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .game-grid {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
 
-    .randomAnimal {
-        height: 250px;
-    }
+/* TO DO */
+/* Small Phones */
+@media (max-width: 480px) {
+    /* Styles for small phones */
+}
 
-    h1 {
-        font-size: 1.5rem;
-    }
+/* Medium Phones */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Styles for medium phones */
+}
+
+/* Large Phones / Small Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for large phones */
 }
