@@ -1,5 +1,7 @@
 # AnoraAnimalProject
 
+Animal ID game! Match the sounds to the correct animals.
+
 How To:
 Turn off & create new animals - Refer to Animals.js
 
