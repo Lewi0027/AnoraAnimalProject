@@ -2,8 +2,12 @@
 
 Animal ID game! Match the sounds to the correct animals.
 
-How To:
+<img src="https://github.com/user-attachments/assets/b2025d89-b00b-4c51-833a-2372642d257a" alt="Game Image" width="300">
+
+## How To:
 Turn off & create new animals - Refer to Animals.js
+
+Compile - Double click .html file and open with primary browsing application.
 
 ## Sources for AnoraAnimalProject
 
