@@ -3,8 +3,8 @@ $(document).ready(function() {
     let selectedAnimals = [];
     let currentSoundIndex = 0;
 
+    //Deep shuffle (Fisher-Yates)
     function initializeGame(numAnimals = MAX_ANIMALS) {
-        // Deep shuffle to prevent mutation of original array
         selectedAnimals = animals
             .slice()
             .sort(() => 0.5 - Math.random())
@@ -67,7 +67,7 @@ $(document).ready(function() {
         $('#restart-btn').on('click', () => location.reload());
     }
 
-    // Event Listeners
+    //Event Listeners
     $('#soundIconButton').on('click', playCurrentSound);
     
     $('.randomAnimal').on('click', function() {
@@ -75,6 +75,5 @@ $(document).ready(function() {
         handleAnimalClick(index);
     });
 
-    // Initial game setup
     initializeGame();
 });
